@@ -1,0 +1,23 @@
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    background-color: coral;
+}
+
+.selected {
+    background-color: antiquewhite;
+    color: black;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.nav-links li, .selected {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: 300ms;
+}
