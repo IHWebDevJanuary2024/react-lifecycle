@@ -1,8 +1,20 @@
-# React + Vite
+# React components lifecycle
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In this class we've learned how the lifecycle of a React component works. We've learned that a component has several lifecycle methods that can be used to run code at specific times in the process.
 
-Currently, two official plugins are available:
+![Lifecycle Diagram](./src/assets/lifecycle.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Fetch 
+Whenever we want to get some data from an API we are going to use ``fetch`` inside the ``useEffect``, so the call is made only once:
+```jsx
+useEffect(() => {
+  fetch('https://api.example.com/data')
+    .then(response => response.json())
+    .then(data => {
+      // Do something with the data
+    })
+    .catch(error => {
+      // Handle the error
+    });
+}, []);
+```
